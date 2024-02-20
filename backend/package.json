@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "start": "nodemon index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Wesley",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
