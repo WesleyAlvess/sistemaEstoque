@@ -198,6 +198,16 @@ const atualizarQuantidadeProduto = async (req, res) => {
             });
         }
 
+        // Extraindo o nome do arquivo do campo 'src'
+        const url = produto.src;
+        const nomeArquivo = url.substring(url.lastIndexOf('/') + 1);
+
+        // Montando o caminho absoluto do arquivo
+        const caminhoCompleto = path.join(__dirname, '..', 'uploads', nomeArquivo);
+
+        // Deletando o arquivo img
+        fs.unlinkSync(caminhoCompleto);
+
         // Verificando se o tipo de transação é uma saída
         if (quantidade > produto.quantidade) {
             return res.status(400).json({

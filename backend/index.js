@@ -6,7 +6,7 @@ const cors = require('cors')
 const path = require('path');
 const productsRoute = require('./routes/produto.route.js')
 const transacoesRoute = require('./routes/transacoes.route.js')
-const userRoute = require('./routes/user.route.js')
+
 
 
 
@@ -24,7 +24,7 @@ app.use(cors())
 // Routes
 app.use('/', productsRoute)
 app.use('/', transacoesRoute)
-app.use('/', userRoute)
+
 
 app.listen(port, (req, res) => {
     console.log(`Server is running on port ${port}...`)

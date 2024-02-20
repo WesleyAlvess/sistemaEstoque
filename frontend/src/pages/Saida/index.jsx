@@ -36,12 +36,12 @@ const Saida = () => {
     }
 
     // Abre o Modal e envia os dados do produto 
-    const handleSaida = (produto) => {
+    const handleSaida = async (produto) => {
         try {
             setIsOpenModal(true)
             setSelectedProduct(produto)
-
             setSearchResults(searchResults.filter((item) => item._id !== produto._id))
+
         } catch (err) {
             console.error("Erro ao realizar saída do estoque:", err)
         }

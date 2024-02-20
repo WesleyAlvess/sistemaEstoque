@@ -2,7 +2,7 @@ import { Button, Navbar, TextInput } from 'flowbite-react'
 import { Link, useLocation } from 'react-router-dom'
 import { AiOutlineSearch } from 'react-icons/ai'
 
-const Header = ({ onLogout }) => {
+const Header = () => {
     const path = useLocation().pathname
 
     return (
@@ -26,9 +26,6 @@ const Header = ({ onLogout }) => {
                 </Navbar.Link>
                 <Navbar.Link className='rounded-lg' active={path === '/transacoes'} as={"div"}>
                     <Link to='/transacoes'>Transações</Link>
-                </Navbar.Link>
-                <Navbar.Link className='rounded-lg' as={"div"}>
-                    <button className='bg-cyan-600 px-2 h-6 text-slate-200 rounded-md' onClick={onLogout}>Sair</button>
                 </Navbar.Link>
             </Navbar.Collapse>
         </Navbar>
